@@ -15,12 +15,14 @@ type FileOptions = Pick<AcornOptions, 'ecmaVersion'> & {
 
 // }
 
-async function checkFile(path: string | string[], options: FileOptions) {
+export async function checkFile(path: string | string[], options: FileOptions) {
   const absPaths = await glob(path, { absolute: true })
+  console.log('absPaths', absPaths)
   const fileIncompatibleNodes = await Promise.all(absPaths.map(absPath => async () => {
     const str = await fs.readFile(absPath, { encoding: 'utf-8'})
     const ast = str2AST(str, options)
     const nodes = collectAPINodes(ast)
+    console.log('nodes', nodes)
     const incompatibleNodes = nodes.filter(node => !checkAPI(
       formatAPINode(node as unknown as Node), 
       options.browserslist

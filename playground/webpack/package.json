@@ -1,0 +1,17 @@
+{
+  "name": "webpack-playground",
+  "version": "1.0.0",
+  "private": true,
+  "author": "kricsleo",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve --open --mode=development "
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
