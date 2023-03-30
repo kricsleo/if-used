@@ -1,5 +1,5 @@
-import acorn, { Options as AcornOptions,  } from 'acorn';
-import walk from 'acorn-walk'
+import { parse as acornParse, Options as AcornOptions } from 'acorn';
+import { simple as walkSimple} from 'acorn-walk'
 import fs from 'fs/promises'
 import glob from 'fast-glob'
 import caniuse from 'caniuse-api'
@@ -17,9 +17,8 @@ type FileOptions = Pick<AcornOptions, 'ecmaVersion'> & {
 
 export async function checkFile(path: string | string[], options: FileOptions) {
   const absPaths = await glob(path, { absolute: true })
-  console.log('absPaths', absPaths)
-  const fileIncompatibleNodes = await Promise.all(absPaths.map(absPath => async () => {
-    const str = await fs.readFile(absPath, { encoding: 'utf-8'})
+  const fileIncompatibleNodes = await Promise.all(absPaths.map(async absPath => {
+    const str = await fs.readFile(absPath, { encoding: 'utf-8' })
     const ast = str2AST(str, options)
     const nodes = collectAPINodes(ast)
     console.log('nodes', nodes)
@@ -38,7 +37,7 @@ export async function checkFile(path: string | string[], options: FileOptions) {
 // }
 
 function str2AST(str: string, options: AcornOptions) {
-  const result = acorn.parse(str, options)
+  const result = acornParse(str, options)
   return result
 }
 
@@ -51,13 +50,17 @@ function formatAPINode(node: Node): string {
 }
 
 const checkAPI = memoize(
-  (api: string, browserslist: Browserslist) => caniuse.isSupported(api, browserslist),
+  (api: string, browserslist: Browserslist) => {
+    console.log('api', api)
+    // todo: filter only public api
+    return caniuse.isSupported(api, browserslist)
+  },
   (api, browserslist) => api + browserslist
 )
 
 function collectAPINodes(ast: acorn.Node) {
   const nodes: acorn.Node[] = []
-  walk.simple(ast, {
+  walkSimple(ast, {
     MemberExpression(node) {
       nodes.push(node)
     },
