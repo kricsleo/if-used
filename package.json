@@ -1,0 +1,11 @@
+{
+  "name": "incompatible",
+  "version": "1.0.0",
+  "description": "Check usage of imcompatible APIs in javascirpt.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["incompatible", "API", "tool"],
+  "author": "kricsleo",
+  "license": "MIT"
+}
