@@ -52,8 +52,13 @@
     "vitest": "^0.29.8"
   },
   "dependencies": {
+    "@types/caniuse-api": "^3.0.2",
+    "@types/estree": "^1.0.0",
+    "@types/lodash.memoize": "^4.1.7",
     "acorn": "^8.8.2",
     "acorn-walk": "^8.2.0",
-    "fast-glob": "^3.2.12"
+    "caniuse-api": "^3.0.0",
+    "fast-glob": "^3.2.12",
+    "lodash.memoize": "^4.1.2"
   }
 }

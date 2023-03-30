@@ -1,20 +1,30 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/caniuse-api': ^3.0.2
+  '@types/estree': ^1.0.0
+  '@types/lodash.memoize': ^4.1.7
   '@types/node': ^18.15.11
   acorn: ^8.8.2
   acorn-walk: ^8.2.0
   bumpp: ^9.1.0
+  caniuse-api: ^3.0.0
   fast-glob: ^3.2.12
+  lodash.memoize: ^4.1.2
   pnpm: ^8.1.0
   typescript: ^5.0.2
   unbuild: ^1.1.2
   vitest: ^0.29.8
 
 dependencies:
+  '@types/caniuse-api': registry.npmmirror.com/@types/caniuse-api/3.0.2
+  '@types/estree': registry.npmmirror.com/@types/estree/1.0.0
+  '@types/lodash.memoize': registry.npmmirror.com/@types/lodash.memoize/4.1.7
   acorn: registry.npmmirror.com/acorn/8.8.2
   acorn-walk: registry.npmmirror.com/acorn-walk/8.2.0
+  caniuse-api: registry.npmmirror.com/caniuse-api/3.0.0
   fast-glob: registry.npmmirror.com/fast-glob/3.2.12
+  lodash.memoize: registry.npmmirror.com/lodash.memoize/4.1.2
 
 devDependencies:
   '@types/node': registry.npmmirror.com/@types/node/18.15.11
@@ -718,6 +728,12 @@ packages:
       rollup: registry.npmmirror.com/rollup/3.20.2
     dev: true
 
+  registry.npmmirror.com/@types/caniuse-api/3.0.2:
+    resolution: {integrity: sha512-YfCDMn7R59n7GFFfwjPAM0zLJQy4UvveC32rOJBmTqJJY8uSRqM4Dc7IJj8V9unA48Qy4nj5Bj3jD6Q8VZ1Seg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/caniuse-api/-/caniuse-api-3.0.2.tgz}
+    name: '@types/caniuse-api'
+    version: 3.0.2
+    dev: false
+
   registry.npmmirror.com/@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/chai-subset/-/chai-subset-1.3.3.tgz}
     name: '@types/chai-subset'
@@ -736,7 +752,20 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/estree/-/estree-1.0.0.tgz}
     name: '@types/estree'
     version: 1.0.0
-    dev: true
+
+  registry.npmmirror.com/@types/lodash.memoize/4.1.7:
+    resolution: {integrity: sha512-lGN7WeO4vO6sICVpf041Q7BX/9k1Y24Zo3FY0aUezr1QlKznpjzsDk3T3wvH8ofYzoK0QupN9TWcFAFZlyPwQQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/lodash.memoize/-/lodash.memoize-4.1.7.tgz}
+    name: '@types/lodash.memoize'
+    version: 4.1.7
+    dependencies:
+      '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.192
+    dev: false
+
+  registry.npmmirror.com/@types/lodash/4.14.192:
+    resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.192.tgz}
+    name: '@types/lodash'
+    version: 4.14.192
+    dev: false
 
   registry.npmmirror.com/@types/node/18.15.11:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.15.11.tgz}
@@ -889,7 +918,6 @@ packages:
       electron-to-chromium: registry.npmmirror.com/electron-to-chromium/1.4.345
       node-releases: registry.npmmirror.com/node-releases/2.0.10
       update-browserslist-db: registry.npmmirror.com/update-browserslist-db/1.0.10_browserslist@4.21.5
-    dev: true
 
   registry.npmmirror.com/builtin-modules/3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/builtin-modules/-/builtin-modules-3.3.0.tgz}
@@ -945,11 +973,21 @@ packages:
     version: 1.0.2
     dev: true
 
+  registry.npmmirror.com/caniuse-api/3.0.0:
+    resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/caniuse-api/-/caniuse-api-3.0.0.tgz}
+    name: caniuse-api
+    version: 3.0.0
+    dependencies:
+      browserslist: registry.npmmirror.com/browserslist/4.21.5
+      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001473
+      lodash.memoize: registry.npmmirror.com/lodash.memoize/4.1.2
+      lodash.uniq: registry.npmmirror.com/lodash.uniq/4.5.0
+    dev: false
+
   registry.npmmirror.com/caniuse-lite/1.0.30001473:
     resolution: {integrity: sha512-ewDad7+D2vlyy+E4UJuVfiBsU69IL+8oVmTuZnH5Q6CIUbxNfI50uVpRHbUPDD6SUaN2o0Lh4DhTrvLG/Tn1yg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001473.tgz}
     name: caniuse-lite
     version: 1.0.30001473
-    dev: true
 
   registry.npmmirror.com/chai/4.3.7:
     resolution: {integrity: sha512-HLnAzZ2iupm25PlN0xFreAlBA5zaBSv3og0DdeGA4Ar6h6rJ3A0rolRUKJhSF2V10GZKDgWF/VmAEsNWjCRB+A==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/chai/-/chai-4.3.7.tgz}
@@ -1131,7 +1169,6 @@ packages:
     resolution: {integrity: sha512-znGhOQK2TUYLICgS25uaM0a7pHy66rSxbre7l762vg9AUoCcJK+Bu+HCPWpjL/U/kK8/Hf+6E0szAUJSyVYb3Q==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.345.tgz}
     name: electron-to-chromium
     version: 1.4.345
-    dev: true
 
   registry.npmmirror.com/emoji-regex/9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/emoji-regex/-/emoji-regex-9.2.2.tgz}
@@ -1176,7 +1213,6 @@ packages:
     name: escalade
     version: 3.1.1
     engines: {node: '>=6'}
-    dev: true
 
   registry.npmmirror.com/escape-string-regexp/1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz}
@@ -1523,6 +1559,18 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  registry.npmmirror.com/lodash.memoize/4.1.2:
+    resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz}
+    name: lodash.memoize
+    version: 4.1.2
+    dev: false
+
+  registry.npmmirror.com/lodash.uniq/4.5.0:
+    resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz}
+    name: lodash.uniq
+    version: 4.5.0
+    dev: false
+
   registry.npmmirror.com/loupe/2.3.6:
     resolution: {integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/loupe/-/loupe-2.3.6.tgz}
     name: loupe
@@ -1701,7 +1749,6 @@ packages:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/node-releases/-/node-releases-2.0.10.tgz}
     name: node-releases
     version: 2.0.10
-    dev: true
 
   registry.npmmirror.com/once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/once/-/once-1.4.0.tgz}
@@ -1756,7 +1803,6 @@ packages:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz}
     name: picocolors
     version: 1.0.0
-    dev: true
 
   registry.npmmirror.com/picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz}
@@ -2188,7 +2234,6 @@ packages:
       browserslist: registry.npmmirror.com/browserslist/4.21.5
       escalade: registry.npmmirror.com/escalade/3.1.1
       picocolors: registry.npmmirror.com/picocolors/1.0.0
-    dev: true
 
   registry.npmmirror.com/vite-node/0.29.8_@types+node@18.15.11:
     resolution: {integrity: sha512-b6OtCXfk65L6SElVM20q5G546yu10/kNrhg08afEoWlFRJXFq9/6glsvSVY+aI6YeC1tu2TtAqI2jHEQmOmsFw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/vite-node/-/vite-node-0.29.8.tgz}
