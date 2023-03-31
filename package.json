@@ -2,10 +2,19 @@
   "name": "incompatible",
   "version": "1.0.0",
   "description": "Check usage of imcompatible APIs in javascirpt.",
+  "packageManager": "pnpm@8.1.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["incompatible", "API", "tool"],
+  "keywords": [
+    "incompatible",
+    "API",
+    "tool"
+  ],
   "author": "kricsleo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pnpm": "8.1.0",
+    "tsx": "^3.12.6"
+  }
 }

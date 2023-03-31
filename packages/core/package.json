@@ -1,0 +1,54 @@
+{
+  "name": "@incompatible/core",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.1.0",
+  "description": "",
+  "author": "Kricsleo <kricsleo@163.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/kricsleo/incompatible/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kricsleo/incompatible.git"
+  },
+  "bugs": "https://github.com/antfu/incompatible/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "bumpp": "^9.1.0",
+    "pnpm": "^8.1.0",
+    "typescript": "^5.0.2",
+    "unbuild": "^1.1.2",
+    "vitest": "^0.29.8"
+  }
+}
