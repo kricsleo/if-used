@@ -38,12 +38,12 @@ export async function checkFile(path: string | string[], options: FileOptions) {
 //    fs.readFile()
 // }
 
-function str2AST(str: string, options: AcornOptions) {
+export function str2AST(str: string, options: AcornOptions) {
   const result = acornParse(str, options)
   return result
 }
 
-function formatAPINode(node: Node): string {
+export function formatAPINode(node: Node): string {
   switch (node.type) {
     case 'Identifier': return node.name
     case 'MemberExpression': return formatAPINode(node.object) + '.' + formatAPINode(node.property)
@@ -51,7 +51,7 @@ function formatAPINode(node: Node): string {
   }
 }
 
-const checkAPI = memoize(
+export const checkAPI = memoize(
   (api: string, browserslist: Browserslist) => {
     console.log('api', api)
     // todo: filter only public api
@@ -69,7 +69,7 @@ function collectAPINodes(ast: acorn.Node) {
   return nodes
 }
 
-function isNativeAPINode(apiNode: Node) {
+export function isNativeAPINode(apiNode: Node) {
   if ( apiNode.type === 'MemberExpression' ) {
     console.log('apiNode', apiNode)
     const objectName = apiNode.object.name;
