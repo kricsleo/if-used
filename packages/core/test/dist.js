@@ -1,1 +1,0 @@
-(()=>{"use strict";document.body.appendChild(function(){const e=document.createElement("pre");return e.innerText="Hello, webpack",e}())})();
