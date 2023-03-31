@@ -6,7 +6,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode=development",
+    "build": "webpack --mode=production",
     "start": "webpack serve --open --mode=development "
   },
   "devDependencies": {

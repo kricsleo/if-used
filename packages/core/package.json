@@ -52,6 +52,7 @@
     "vitest": "^0.29.8"
   },
   "dependencies": {
+    "@mdn/browser-compat-data": "^5.2.47",
     "@types/caniuse-api": "^3.0.2",
     "@types/estree": "^1.0.0",
     "@types/lodash.memoize": "^4.1.7",
