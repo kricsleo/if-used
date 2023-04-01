@@ -646,7 +646,7 @@ describe('core', () => {
 
   it('checkAPI', () => {
     // using featureID of caniuse
-    const api = 'flexbox'
+    const api = 'api.Window.alert'
     expect(checkAPI(api, browserslist)).toMatchInlineSnapshot('true')
   })
 })
