@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { checkAPI, checkFile } from '../src'
 
 const files = '*/examples/*.js'
-const browserslist = 'Chrome 10'
+const browserslist = 'Chrome 75'
 
 describe('core', () => {
 
@@ -645,8 +645,9 @@ describe('core', () => {
 
 
   it('checkAPI', () => {
-    const api = 'alert'
-    expect(checkAPI(api, browserslist)).toMatchInlineSnapshot()
+    // using featureID of caniuse
+    const api = 'flexbox'
+    expect(checkAPI(api, browserslist)).toMatchInlineSnapshot('true')
   })
 })
 
