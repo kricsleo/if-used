@@ -22,13 +22,12 @@ export async function checkFile(path: string | string[], options: FileOptions) {
     const str = await fs.readFile(absPath, { encoding: 'utf-8' })
     const ast = str2AST(str, options)
     const nodes = collectAPINodes(ast) as unknown as Node[]
-    console.log('nodes', nodes)
     const nativeAPINodes = nodes.filter(node => isNativeAPINode(node))
     const incompatibleNodes = nativeAPINodes.filter(node => !checkAPI(
       formatAPINode(node), 
       options.browserslist
     ))
-    return incompatibleNodes
+    return { nodes, incompatibleNodes}
   }))
   return fileIncompatibleNodes
 }
@@ -53,7 +52,6 @@ export function formatAPINode(node: Node): string {
 
 export const checkAPI = memoize(
   (api: string, browserslist: Browserslist) => {
-    console.log('api', api)
     // todo: filter only public api
     return caniuse.isSupported(api, browserslist)
   },
@@ -62,16 +60,14 @@ export const checkAPI = memoize(
 
 function collectAPINodes(ast: acorn.Node) {
   const nodes: acorn.Node[] = []
-  console.log('ast', ast)
   walkFull(ast, node => {
-    console.log('--------', node)
+    nodes.push(node)
   })
   return nodes
 }
 
 export function isNativeAPINode(apiNode: Node) {
   if ( apiNode.type === 'MemberExpression' ) {
-    console.log('apiNode', apiNode)
     const objectName = apiNode.object.name;
     const propertyName = apiNode.property.name;
 
