@@ -14,6 +14,9 @@ Check all compiled JavaScript files and find code using incompatible APIs based 
 - [ ] Output result.
   - [ ] **Locate to the file** which is using incompatible APIs.
 
+- [ ] How does Babel work? Can Babel replace this tool?
+- [ ] How does autoprefixer work? (Might be simpler than babel.)
+
 ## License
 
 [MIT](./LICENSE) @ [Kricsleo](https://github.com/kricsleo)
