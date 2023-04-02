@@ -18,6 +18,19 @@ Check all compiled JavaScript files and find code using incompatible APIs based 
 - [ ] How does Babel work? Can Babel replace this tool?
 - [ ] How does autoprefixer work? (Might be simpler than babel.)
 
+```ts
+function done(foo: string | number): boolean {
+  // Supposing: 👇
+  // String.prototype.done => supported in chrome 75
+  // Number.prototype.done => supported in chrome 60
+  // 
+  // How to handle with this `done`?
+  // Is it `String.prototype.done` or `Number.prototype.done`
+  return foo.done()
+}
+
+```
+
 ## License
 
 [MIT](./LICENSE) @ [Kricsleo](https://github.com/kricsleo)

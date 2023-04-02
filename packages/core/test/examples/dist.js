@@ -1,8 +1,6 @@
 alert('hello')
 
 (() => {
-  function alert() {
-
-  }
+  function alert() {}
   alert('custom')
 })()
