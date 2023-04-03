@@ -4,6 +4,11 @@
 
 Check all compiled JavaScript files and find code using incompatible APIs based on the provided browser compatibility strategy. This is used to check the compatibility of the actual generated code after compilation.
 
+## MVP First
+
+- [ ] Global variables: [bcd - api](https://github.com/mdn/browser-compat-data/tree/main/api)
+- [ ] Builtin functions: [bcd - javascript]https://github.com/mdn/browser-compat-data/tree/main/javascript
+
 ## Todos
 
 - [ ] Parse `*.js` files to `AST`.
