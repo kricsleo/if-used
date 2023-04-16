@@ -5,7 +5,7 @@ import glob from 'fast-glob'
 import caniuse from 'caniuse-api'
 import memoize from 'lodash.memoize'
 import type { Node } from 'estree'
-import bcd from '@mdn/browser-compat-data'
+import bcd, { CompatData } from '@mdn/browser-compat-data'
 
 type Browserslist = string | string[]
 type FileOptions = Pick<AcornOptions, 'ecmaVersion'> & {
@@ -24,7 +24,7 @@ export async function checkFile(path: string | string[], options: FileOptions) {
     const nodes = collectAPINodes(ast) as unknown as Node[]
     const nativeAPINodes = nodes.filter(node => isNativeAPINode(node))
     const incompatibleNodes = nativeAPINodes.filter(node => !checkAPI(
-      formatAPINode(node), 
+      formatAPIName(node), 
       options.browserslist
     ))
     return { nodes, incompatibleNodes}
@@ -42,10 +42,10 @@ export function str2AST(str: string, options: AcornOptions) {
   return result
 }
 
-export function formatAPINode(node: Node): string {
+export function formatAPIName(node: Node): string {
   switch (node.type) {
     case 'Identifier': return node.name
-    case 'MemberExpression': return formatAPINode(node.object) + '.' + formatAPINode(node.property)
+    case 'MemberExpression': return formatAPIName(node.object) + '.' + formatAPIName(node.property)
     default: return ''
   }
 }

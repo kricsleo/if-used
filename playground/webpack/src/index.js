@@ -1,9 +1,13 @@
-function component() {
-  const element = document.createElement('pre');
-  element.innerText = 'Hello, webpack';
-  const a = [1, 3]
-  alert('json', ...a)
-  return element;
+class Foo {
+  replaceAll() {
+
+  }
 }
 
-document.body.appendChild(component());
+function component() {
+  const foo = new Foo()
+  foo.replaceAll()
+  return foo
+}
+
+component();

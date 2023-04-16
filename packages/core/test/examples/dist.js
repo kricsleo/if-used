@@ -1,6 +1,1 @@
-alert('hello')
-
-(() => {
-  function alert() {}
-  alert('custom')
-})()
+a.b.flatMap()

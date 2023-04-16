@@ -54,11 +54,13 @@
   "dependencies": {
     "@mdn/browser-compat-data": "^5.2.47",
     "@types/caniuse-api": "^3.0.2",
+    "@types/caniuse-lite": "^1.0.1",
     "@types/estree": "^1.0.0",
     "@types/lodash.memoize": "^4.1.7",
     "acorn": "^8.8.2",
     "acorn-walk": "^8.2.0",
     "caniuse-api": "^3.0.0",
+    "caniuse-lite": "^1.0.30001473",
     "fast-glob": "^3.2.12",
     "lodash.memoize": "^4.1.2"
   }
