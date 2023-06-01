@@ -11,6 +11,8 @@ Check all compiled JavaScript files and find code using incompatible APIs based 
 
 ## Todos
 
+Refer to [closure-compiler](https://github.com/google/closure-compiler)
+
 - [ ] Parse `*.js` files to `AST`.
 - [ ] Walk through `AST` to find all API usage.
 - [ ] Parse `browserlist` to find available APIs.
